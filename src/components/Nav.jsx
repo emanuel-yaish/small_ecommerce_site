@@ -3,13 +3,20 @@ import { NavLink } from "react-router-dom";
 import "./Nav.css";
 
 function Nav(props) {
-  const links = ["Shop", "categories", "Sign in", "Cart"];
+  console.log("cart", props.cart);
+
+  const links = ["shop", "categories", "signin", "cart"];
+  const linksText = ["Shop", "Categories", "Sign in", props.cart];
   return (
     <div className="nav">
-      {links.map((link) => {
+      {links.map((link, index) => {
         return (
-          <NavLink className="nav-link" to={`/invoices/${link}`} key={link}>
-            {link !== "Cart" ? link : ""}
+          <NavLink
+            className={`nav-link ${link}`}
+            to={`/invoices/${link}`}
+            key={link}
+          >
+            {linksText[index]}
           </NavLink>
         );
       })}

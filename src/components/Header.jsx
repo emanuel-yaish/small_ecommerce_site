@@ -7,7 +7,7 @@ function Header(props) {
   return (
     <div className="header">
       <Logo />
-      <Nav />
+      <Nav cart={props.cart} />
     </div>
   );
 }
