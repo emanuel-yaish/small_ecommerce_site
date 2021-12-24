@@ -1,0 +1,41 @@
+.home {
+  height: 90vh;
+  padding: 1vh;
+  display: grid;
+  gap: 1vh;
+  grid-template-areas:
+    "mens mens mens mens mens sports sports women women"
+    "sunglasses sunglasses coupons coupons  backpack backpack backpack backpack backpack";
+}
+
+.department {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.mens {
+  background-image: url("../assets/images/mens.jpg");
+  grid-area: mens;
+}
+
+.sports {
+  background-image: url("../assets/images/sports.jpg");
+  grid-area: sports;
+}
+
+.women {
+  background-image: url("../assets/images/woman.jpg");
+  grid-area: women;
+}
+.sunglasses {
+  background-image: url("../assets/images/sunglasses.jpg");
+  grid-area: sunglasses;
+}
+.coupons {
+  background-image: url("../assets/images/coupons.jpg");
+  grid-area: coupons;
+}
+.backpack {
+  background-image: url("../assets/images/backpack.jpg");
+  grid-area: backpack;
+}

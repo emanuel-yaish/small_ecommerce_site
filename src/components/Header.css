@@ -1,0 +1,9 @@
+.header {
+  background-color: var(--nav-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  padding: 2rem;
+  color: white;
+}
