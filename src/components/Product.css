@@ -1,0 +1,38 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3rem 1rem;
+  justify-content: space-between;
+  height: 100%;
+  background-color: rgba(135, 245, 255, 0.062);
+}
+
+.product-image {
+  height: 20vh;
+}
+
+.product-title {
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-weight: 700;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.product-description {
+  font-size: 2rem;
+}
+
+.product-price {
+  font-size: 3rem;
+  color: var(--price);
+}
+
+.product-cart-button {
+  width: 100%;
+  font-size: 2rem;
+  padding: 1rem;
+  background-color: var(--nav-color);
+  color: white;
+}

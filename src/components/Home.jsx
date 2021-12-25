@@ -3,7 +3,7 @@ import "./Home.css";
 
 function Home(props) {
   const departments = [
-    "mens",
+    "men",
     "sports",
     "women",
     "sunglasses",

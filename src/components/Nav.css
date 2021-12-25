@@ -8,6 +8,10 @@
   margin: 0 1rem;
 }
 
+.nav-link:hover {
+  text-decoration: underline;
+}
+
 .cart {
   background-image: url("../assets/images/cart.png");
   background-position-x: 0;

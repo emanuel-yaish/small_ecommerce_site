@@ -1,0 +1,55 @@
+.sign-in {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.sign-in-form {
+  border: 1px solid black;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: var(--link);
+}
+
+.form-item {
+  margin: 2rem 0;
+}
+
+.form-header {
+  text-align: center;
+  text-decoration: underline;
+  font-size: 3rem;
+  margin: 2rem 0;
+  text-transform: uppercase;
+}
+
+.form-label,
+.form-input {
+  display: inline-block;
+  width: 100%;
+}
+
+.form-label {
+  font-size: 2rem;
+}
+
+.form-input {
+  font-size: 3rem;
+  padding: 1rem;
+}
+
+.sign-in-link {
+  background-color: var(--nav-color);
+  width: 100%;
+  text-decoration: none;
+  border: 1px solid black;
+  display: inline-block;
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+  box-shadow: 2px 4px 8px black;
+  margin: 2rem 0;
+}

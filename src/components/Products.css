@@ -1,0 +1,13 @@
+.products {
+  padding: 2rem;
+  width: 980px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5vh 3vw;
+  align-items: center;
+}
+
+.loding {
+  font-size: 3rem;
+  margin-top: 4rem;
+}

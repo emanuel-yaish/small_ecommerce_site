@@ -11,11 +11,7 @@ function Nav(props) {
     <div className="nav">
       {links.map((link, index) => {
         return (
-          <NavLink
-            className={`nav-link ${link}`}
-            to={`/invoices/${link}`}
-            key={link}
-          >
+          <NavLink className={`nav-link ${link}`} to={`/${link}`} key={link}>
             {linksText[index]}
           </NavLink>
         );
