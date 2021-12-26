@@ -14,19 +14,48 @@ import Coupons from "../components/Coupons";
 import Backpack from "../components/Backpack";
 
 class SmallEcommerce extends React.Component {
-  state = { cart: 0 };
+  state = { cart: [] };
+
+  addToCart = (product) => {
+    this.setState({ cart: [...this.state.cart, product] });
+  };
+
+  removeFromCart = (product) => {
+    const cart = [...this.state.cart];
+    let itemIndex = -1;
+    for (let index = 0; index < cart.length && itemIndex === -1; index++) {
+      if (cart[index].id === product.id) itemIndex = index;
+    }
+    console.log("itemIndex", itemIndex);
+    if (itemIndex !== -1) {
+      cart.splice(itemIndex, 1);
+      this.setState({ cart: cart });
+    }
+  };
+
   render() {
     return (
       <div className="small-ecommerece">
         <BrowserRouter>
-          <Header cart={this.state.cart} />
+          <Header cart={this.state.cart.length} />
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/shop" element={<Shop />}></Route>
             <Route path="/categories" element={<Categories />}></Route>
             <Route path="/signin" element={<SignIn />}></Route>
-            <Route path="/cart" element={<Cart />}></Route>
-            <Route path="/men" element={<Men />}></Route>
+            <Route
+              path="/cart"
+              element={
+                <Cart
+                  cart={this.state.cart}
+                  removeFromCart={(product) => this.removeFromCart(product)}
+                />
+              }
+            ></Route>
+            <Route
+              path="/men"
+              element={<Men addToCart={(product) => this.addToCart(product)} />}
+            ></Route>
             <Route path="/sports" element={<Sprots />}></Route>
             <Route path="/women" element={<Women />}></Route>
             <Route path="/sunglasses" element={<Sunglasses />}></Route>

@@ -14,7 +14,6 @@ class Products extends Component {
 
   getProducts = async (term) => {
     const response = await EcommerceApi.get(term);
-    console.log(response.data);
     this.setState({ products: response.data });
   };
 
@@ -22,10 +21,9 @@ class Products extends Component {
     return this.state.products.map((product) => (
       <Product
         key={product.id}
-        image={product.image}
-        title={product.title}
-        description={product.description}
-        price={product.price}
+        product={product}
+        action={this.props.action}
+        type={"product"}
       />
     ));
   };

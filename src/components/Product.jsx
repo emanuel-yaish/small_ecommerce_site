@@ -1,6 +1,13 @@
 import "./Product.css";
 
-function Product({ image, title, description, price }) {
+function Product(props) {
+  const { image, title, description, price } = props.product;
+
+  const getButtonText = () => {
+    if (props.type === "cart") return "Remove from Cart";
+    return "Add To Cart";
+  };
+
   const truncate = (str, max, suffix) =>
     str.length < max
       ? str
@@ -19,7 +26,13 @@ function Product({ image, title, description, price }) {
         {truncate(description, 50, "...")}
       </div>
       <div className="product-price">{price}</div>
-      <button className="product-cart-button">Add To Cart</button>
+      <button
+        onClick={() => props.action(props.product)}
+        className="product-cart-button"
+      >
+        {getButtonText()}
+      </button>
+      ;
     </div>
   );
 }
