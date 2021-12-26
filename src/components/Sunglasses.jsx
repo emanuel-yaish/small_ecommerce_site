@@ -4,7 +4,7 @@ import Products from "./Products";
 function Sunglasses(props) {
   return (
     <div className="sunglasses flex-center">
-      <Products department="sunglasses" />
+      <Products action={props.addToCart} department="sunglasses" />
     </div>
   );
 }

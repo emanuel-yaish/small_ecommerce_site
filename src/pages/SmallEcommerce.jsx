@@ -26,7 +26,7 @@ class SmallEcommerce extends React.Component {
     for (let index = 0; index < cart.length && itemIndex === -1; index++) {
       if (cart[index].id === product.id) itemIndex = index;
     }
-    console.log("itemIndex", itemIndex);
+
     if (itemIndex !== -1) {
       cart.splice(itemIndex, 1);
       this.setState({ cart: cart });
@@ -56,11 +56,36 @@ class SmallEcommerce extends React.Component {
               path="/men"
               element={<Men addToCart={(product) => this.addToCart(product)} />}
             ></Route>
-            <Route path="/sports" element={<Sprots />}></Route>
-            <Route path="/women" element={<Women />}></Route>
-            <Route path="/sunglasses" element={<Sunglasses />}></Route>
-            <Route path="/coupons" element={<Coupons />}></Route>
-            <Route path="/backpack" element={<Backpack />}></Route>
+            <Route
+              path="/sports"
+              element={
+                <Sprots addToCart={(product) => this.addToCart(product)} />
+              }
+            ></Route>
+            <Route
+              path="/women"
+              element={
+                <Women addToCart={(product) => this.addToCart(product)} />
+              }
+            ></Route>
+            <Route
+              path="/sunglasses"
+              element={
+                <Sunglasses addToCart={(product) => this.addToCart(product)} />
+              }
+            ></Route>
+            <Route
+              path="/coupons"
+              element={
+                <Coupons addToCart={(product) => this.addToCart(product)} />
+              }
+            ></Route>
+            <Route
+              path="/backpack"
+              element={
+                <Backpack addToCart={(product) => this.addToCart(product)} />
+              }
+            ></Route>
           </Routes>
         </BrowserRouter>
       </div>

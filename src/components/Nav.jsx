@@ -3,8 +3,6 @@ import { NavLink } from "react-router-dom";
 import "./Nav.css";
 
 function Nav(props) {
-  console.log("cart", props.cart);
-
   const links = ["shop", "categories", "signin", "cart"];
   const linksText = ["Shop", "Categories", "Sign in", props.cart];
   return (

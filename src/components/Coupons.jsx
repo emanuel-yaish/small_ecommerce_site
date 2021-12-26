@@ -4,7 +4,7 @@ import Products from "./Products";
 function Coupons(props) {
   return (
     <div className="coupons flex-center">
-      <Products department="coupons" />
+      <Products action={props.addToCart} department="coupons" />
     </div>
   );
 }
